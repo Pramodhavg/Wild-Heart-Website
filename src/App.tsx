@@ -107,7 +107,7 @@ export default function App() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ type: "spring", stiffness: 80, damping: 25 }}
                 className="gpu-accelerated space-y-6 flex flex-col items-center md:items-start w-full"
               >
                 <h2 className="text-4xl md:text-5xl font-light italic leading-tight">
@@ -120,7 +120,7 @@ export default function App() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
+                transition={{ type: "spring", stiffness: 80, damping: 25 }}
                 className="gpu-accelerated relative w-[85vw] max-w-[350px] aspect-[4/5] md:w-full md:max-w-[450px] md:max-h-none md:aspect-[9/16] mx-auto overflow-hidden rounded-[2rem] flex-shrink-0"
               >
                 <ScrollSequence
@@ -137,7 +137,7 @@ export default function App() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
+                transition={{ type: "spring", stiffness: 80, damping: 25 }}
                 className="gpu-accelerated order-2 md:order-1 relative w-[85vw] max-w-[350px] aspect-[4/5] md:w-full md:max-w-[450px] md:max-h-none md:aspect-[9/16] mx-auto overflow-hidden rounded-[2rem] flex-shrink-0"
               >
                 <ScrollSequence
@@ -148,7 +148,7 @@ export default function App() {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ type: "spring", stiffness: 80, damping: 25 }}
                 className="gpu-accelerated order-1 md:order-2 space-y-6 flex flex-col items-center md:items-start w-full"
               >
                 <h2 className="text-4xl md:text-5xl font-light italic leading-tight">
@@ -167,7 +167,7 @@ export default function App() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ type: "spring", stiffness: 80, damping: 25 }}
                 className="gpu-accelerated space-y-6 flex flex-col items-center md:items-start w-full"
               >
                 <h2 className="text-4xl md:text-5xl font-light italic leading-tight">
@@ -180,7 +180,7 @@ export default function App() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
+                transition={{ type: "spring", stiffness: 80, damping: 25 }}
                 className="gpu-accelerated relative w-[85vw] max-w-[350px] aspect-[4/5] md:w-full md:max-w-[450px] md:max-h-none md:aspect-[9/16] mx-auto overflow-hidden rounded-[2rem] flex-shrink-0"
               >
                 <ScrollSequence
