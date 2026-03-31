@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
-import { useScroll, useTransform, useMotionValueEvent } from 'motion/react';
+import { useScroll, useTransform, useMotionValueEvent, useSpring } from 'motion/react';
 
 interface ScrollSequenceProps {
   folderPath: string;
@@ -39,7 +39,9 @@ export function ScrollSequence({ folderPath, frameCount }: ScrollSequenceProps) 
     offset: ['start 85%', 'end 15%']
   });
 
-  const frameIndex = useTransform(scrollYProgress, [0, 1], [0, frameCount - 1]);
+  // Hardware physics optimization eliminating mobile stutter!
+  const smoothScroll = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+  const frameIndex = useTransform(smoothScroll, [0, 1], [0, frameCount - 1]);
 
   const drawFrame = (index: number) => {
     if (!images[index] || !canvasRef.current) return;
@@ -81,9 +83,13 @@ export function ScrollSequence({ folderPath, frameCount }: ScrollSequenceProps) 
     ctx.drawImage(img, 0, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
   };
 
+  const requestRef = useRef<number>(0);
+
   useMotionValueEvent(frameIndex, 'change', (latest) => {
-    if (loaded) {
-      drawFrame(Math.round(latest));
+    if (loaded && typeof window !== 'undefined') {
+      // Memory Management: Bounds re-renders precisely against screen refresh rates
+      if (requestRef.current) cancelAnimationFrame(requestRef.current);
+      requestRef.current = requestAnimationFrame(() => drawFrame(Math.round(latest)));
     }
   });
 

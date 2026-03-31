@@ -59,7 +59,7 @@ export default function App() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="relative z-10 text-center space-y-8"
+              className="gpu-accelerated relative z-10 text-center space-y-8"
             >
               <TreePine className="w-16 h-16 text-green-800 mx-auto" />
               <h1 className="text-4xl md:text-6xl font-serif font-light tracking-widest uppercase text-green-900">
@@ -103,12 +103,12 @@ export default function App() {
         <main className="max-w-6xl mx-auto pt-24 md:pt-[20vh] pb-[10vh] px-8 space-y-[15vh]">
           {/* Section 1 */}
           <AudioTrigger src="/assets/audio/boy-sleeping-music.wav" isStarted={isStarted}>
-            <section className="flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-20 items-center justify-center text-center md:text-left min-h-[90vh]">
+            <section className="gpu-accelerated flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-20 items-center justify-center text-center md:text-left min-h-[90vh]">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="space-y-6 flex flex-col items-center md:items-start w-full"
+                className="gpu-accelerated space-y-6 flex flex-col items-center md:items-start w-full"
               >
                 <h2 className="text-4xl md:text-5xl font-light italic leading-tight">
                   Finding peace in the <span className="text-green-800">embrace</span> of the wild.
@@ -121,7 +121,7 @@ export default function App() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="relative w-[85vw] max-w-[350px] aspect-[4/5] md:w-full md:max-w-[450px] md:max-h-none md:aspect-[9/16] mx-auto overflow-hidden rounded-[2rem] flex-shrink-0"
+                className="gpu-accelerated relative w-[85vw] max-w-[350px] aspect-[4/5] md:w-full md:max-w-[450px] md:max-h-none md:aspect-[9/16] mx-auto overflow-hidden rounded-[2rem] flex-shrink-0"
               >
                 <ScrollSequence
                   folderPath="/assets/frames/boy_with_gorilla"
@@ -133,12 +133,12 @@ export default function App() {
 
           {/* Section 2 */}
           <AudioTrigger src="/assets/audio/boy-with_boat_music.wav" isStarted={isStarted}>
-            <section className="flex flex-col md:flex-row gap-10 md:gap-20 items-center justify-center text-center md:text-left min-h-[90vh]">
+            <section className="gpu-accelerated flex flex-col md:flex-row gap-10 md:gap-20 items-center justify-center text-center md:text-left min-h-[90vh]">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="order-2 md:order-1 relative w-[85vw] max-w-[350px] aspect-[4/5] md:w-full md:max-w-[450px] md:max-h-none md:aspect-[9/16] mx-auto overflow-hidden rounded-[2rem] flex-shrink-0"
+                className="gpu-accelerated order-2 md:order-1 relative w-[85vw] max-w-[350px] aspect-[4/5] md:w-full md:max-w-[450px] md:max-h-none md:aspect-[9/16] mx-auto overflow-hidden rounded-[2rem] flex-shrink-0"
               >
                 <ScrollSequence
                   folderPath="/assets/frames/boy_in_boat"
@@ -149,7 +149,7 @@ export default function App() {
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="order-1 md:order-2 space-y-6 flex flex-col items-center md:items-start w-full"
+                className="gpu-accelerated order-1 md:order-2 space-y-6 flex flex-col items-center md:items-start w-full"
               >
                 <h2 className="text-4xl md:text-5xl font-light italic leading-tight">
                   Navigating the <span className="text-green-800">rhythm</span> of the river.
@@ -163,12 +163,12 @@ export default function App() {
 
           {/* Section 3 */}
           <AudioTrigger src="/assets/audio/boy_playing_with_monkey.wav" isStarted={isStarted}>
-            <section className="flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-20 items-center justify-center text-center md:text-left min-h-[90vh]">
+            <section className="gpu-accelerated flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-20 items-center justify-center text-center md:text-left min-h-[90vh]">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="space-y-6 flex flex-col items-center md:items-start w-full"
+                className="gpu-accelerated space-y-6 flex flex-col items-center md:items-start w-full"
               >
                 <h2 className="text-4xl md:text-5xl font-light italic leading-tight">
                   Soaring through the <span className="text-green-800">canopy</span> of dreams.
@@ -181,7 +181,7 @@ export default function App() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="relative w-[85vw] max-w-[350px] aspect-[4/5] md:w-full md:max-w-[450px] md:max-h-none md:aspect-[9/16] mx-auto overflow-hidden rounded-[2rem] flex-shrink-0"
+                className="gpu-accelerated relative w-[85vw] max-w-[350px] aspect-[4/5] md:w-full md:max-w-[450px] md:max-h-none md:aspect-[9/16] mx-auto overflow-hidden rounded-[2rem] flex-shrink-0"
               >
                 <ScrollSequence
                   folderPath="/assets/frames/boy_play_monkey"

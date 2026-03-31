@@ -14,6 +14,11 @@ html {
     background-attachment: fixed;
     background-size: cover;
   }
+  
+  .gpu-accelerated {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
 }
 
 /* Foggy Canopy Soft-Grain Texture */
